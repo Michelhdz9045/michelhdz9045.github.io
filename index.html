@@ -1,97 +1,752 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tecnomi - AI App Development</title>
-<style>
-body {
-    margin:0;
-    font-family: Arial, sans-serif;
-    background:#0f172a;
-    color:white;
-    text-align:center;
-}
-section {
-    padding:60px 20px;
-}
-h1 {
-    font-size:48px;
-}
-h2 {
-    font-size:32px;
-    margin-bottom:20px;
-}
-p {
-    max-width:700px;
-    margin:0 auto 20px;
-    line-height:1.6;
-    color:#cbd5e1;
-}
-.button {
-    display:inline-block;
-    padding:12px 25px;
-    background:#2563eb;
-    color:white;
-    text-decoration:none;
-    border-radius:8px;
-    margin-top:20px;
-}
-.services {
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:20px;
-}
-.card {
-    background:#1e293b;
-    padding:20px;
-    border-radius:10px;
-    width:250px;
-}
-footer {
-    padding:30px;
-    background:#0b1220;
-    font-size:14px;
-    color:#94a3b8;
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Tecnomi builds AI-powered mobile apps and automation tools. iOS/Android development, AI integrations, and workflow automation." />
+  <title>Tecnomi | AI Mobile App Development & Automation</title>
+
+  <style>
+    :root{
+      --bg: #0b1220;
+      --bg2:#0f172a;
+      --card:#111c33;
+      --text:#e5e7eb;
+      --muted:#9aa4b2;
+      --line:#22304d;
+      --accent:#4f46e5;
+      --accent2:#22c55e;
+      --warn:#f59e0b;
+      --shadow: 0 18px 60px rgba(0,0,0,.35);
+      --radius: 16px;
+      --radius2: 22px;
+      --max: 1120px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+      background: radial-gradient(1200px 600px at 20% 10%, rgba(79,70,229,.25), transparent 60%),
+                  radial-gradient(900px 520px at 80% 0%, rgba(34,197,94,.16), transparent 55%),
+                  linear-gradient(180deg, var(--bg), var(--bg2));
+      color:var(--text);
+    }
+
+    a{color:inherit}
+    .container{max-width:var(--max); margin:0 auto; padding:0 20px}
+    .nav{
+      position:sticky; top:0; z-index:10;
+      background: rgba(11,18,32,.78);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(34,48,77,.7);
+    }
+    .nav-inner{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      gap:16px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      text-decoration:none;
+    }
+    .logo{
+      width:38px; height:38px; border-radius:12px;
+      background:
+        radial-gradient(14px 14px at 30% 35%, rgba(255,255,255,.55), transparent 60%),
+        linear-gradient(135deg, rgba(79,70,229,1), rgba(34,197,94,1));
+      box-shadow: 0 10px 25px rgba(79,70,229,.25);
+    }
+    .brand strong{letter-spacing:.3px}
+    .nav-links{
+      display:flex; align-items:center; gap:16px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .nav-links a{
+      text-decoration:none;
+      color:var(--muted);
+      font-weight:600;
+      font-size:14px;
+      padding:8px 10px;
+      border-radius:12px;
+    }
+    .nav-links a:hover{
+      color:var(--text);
+      background: rgba(255,255,255,.06);
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:10px;
+      padding:12px 16px;
+      border-radius:14px;
+      text-decoration:none;
+      font-weight:700;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+      box-shadow: none;
+      transition: transform .08s ease, background .15s ease, border-color .15s ease;
+      cursor:pointer;
+    }
+    .btn:hover{background: rgba(255,255,255,.09); border-color: rgba(255,255,255,.18)}
+    .btn:active{transform: translateY(1px)}
+    .btn-primary{
+      background: linear-gradient(135deg, rgba(79,70,229,1), rgba(99,102,241,1));
+      border-color: rgba(99,102,241,.55);
+      box-shadow: 0 18px 45px rgba(79,70,229,.28);
+    }
+    .btn-primary:hover{background: linear-gradient(135deg, rgba(79,70,229,1), rgba(34,197,94,.9))}
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 12px; border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+      color: var(--muted);
+      font-weight:700; font-size:12px;
+    }
+
+    /* Hero */
+    .hero{padding:70px 0 30px}
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:28px;
+      align-items:stretch;
+    }
+    .hero h1{
+      margin:14px 0 12px;
+      font-size: clamp(34px, 4.2vw, 56px);
+      line-height:1.05;
+      letter-spacing:-0.6px;
+    }
+    .hero p{
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height:1.7;
+      max-width: 60ch;
+    }
+    .hero-actions{
+      display:flex; gap:12px; flex-wrap:wrap;
+      margin-top: 14px;
+    }
+    .metrics{
+      margin-top: 22px;
+      display:flex; flex-wrap:wrap; gap:10px;
+    }
+    .metric{
+      padding:12px 14px;
+      border-radius: 14px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.05);
+      color: var(--muted);
+      font-weight:700;
+      font-size: 13px;
+    }
+    .metric b{color:var(--text)}
+    .hero-card{
+      border-radius: var(--radius2);
+      background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
+      border:1px solid rgba(255,255,255,.10);
+      box-shadow: var(--shadow);
+      padding: 22px;
+      position:relative;
+      overflow:hidden;
+    }
+    .hero-card:before{
+      content:"";
+      position:absolute; inset:-2px;
+      background: radial-gradient(420px 220px at 20% 20%, rgba(79,70,229,.35), transparent 60%),
+                  radial-gradient(420px 220px at 90% 20%, rgba(34,197,94,.22), transparent 55%);
+      opacity:.65;
+      pointer-events:none;
+    }
+    .hero-card > *{position:relative}
+    .hero-card h3{margin:0 0 10px; font-size:18px}
+    .hero-card ul{margin:0; padding-left:18px; color:var(--muted); line-height:1.8}
+    .hero-card .mini{
+      margin-top: 16px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .hero-card .tag{
+      display:inline-flex; align-items:center;
+      gap:8px;
+      font-size: 12px;
+      font-weight:800;
+      color: rgba(255,255,255,.9);
+      padding:8px 10px;
+      border-radius: 999px;
+      background: rgba(34,197,94,.14);
+      border:1px solid rgba(34,197,94,.28);
+      margin-bottom: 10px;
+    }
+
+    /* Sections */
+    section{padding:58px 0}
+    .section-head{
+      display:flex; align-items:flex-end; justify-content:space-between;
+      gap:14px; flex-wrap:wrap;
+      margin-bottom: 20px;
+    }
+    .section-head h2{
+      margin:0;
+      font-size: clamp(22px, 2.6vw, 32px);
+      letter-spacing:-0.2px;
+    }
+    .section-head p{
+      margin:0;
+      color: var(--muted);
+      max-width: 70ch;
+      line-height:1.7;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .card{
+      border-radius: var(--radius);
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.05);
+      padding: 18px;
+      box-shadow: 0 12px 40px rgba(0,0,0,.20);
+    }
+    .card h3{margin: 0 0 8px; font-size:16px}
+    .card p{margin:0; color:var(--muted); line-height:1.7; font-size:14px}
+    .icon{
+      width:38px; height:38px; border-radius: 14px;
+      display:grid; place-items:center;
+      background: rgba(79,70,229,.14);
+      border:1px solid rgba(99,102,241,.28);
+      margin-bottom: 12px;
+      font-weight:900;
+      color: rgba(255,255,255,.92);
+      user-select:none;
+    }
+    .icon.green{background: rgba(34,197,94,.12); border-color: rgba(34,197,94,.25)}
+    .icon.amber{background: rgba(245,158,11,.12); border-color: rgba(245,158,11,.25)}
+
+    .split{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      align-items:stretch;
+    }
+    .list{
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      line-height: 1.85;
+      font-size: 14px;
+    }
+
+    /* Portfolio */
+    .portfolio{
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    .project{
+      border-radius: var(--radius2);
+      border:1px solid rgba(255,255,255,.10);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      padding: 18px;
+      position: relative;
+      overflow:hidden;
+    }
+    .project:before{
+      content:"";
+      position:absolute; inset:-2px;
+      background: radial-gradient(360px 200px at 25% 20%, rgba(79,70,229,.22), transparent 60%),
+                  radial-gradient(360px 200px at 90% 10%, rgba(34,197,94,.16), transparent 55%);
+      opacity:.55;
+      pointer-events:none;
+    }
+    .project > *{position:relative}
+    .badges{display:flex; gap:8px; flex-wrap:wrap; margin-top: 10px}
+    .badge{
+      font-size:12px;
+      font-weight:800;
+      color: rgba(255,255,255,.88);
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.16);
+    }
+
+    /* FAQ */
+    details{
+      border-radius: var(--radius);
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.05);
+      padding: 14px 16px;
+    }
+    details + details{margin-top: 10px}
+    summary{
+      cursor:pointer;
+      font-weight:800;
+      color: rgba(255,255,255,.92);
+      list-style:none;
+    }
+    summary::-webkit-details-marker{display:none}
+    details p{
+      margin: 10px 0 0;
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: 14px;
+    }
+
+    /* Contact */
+    .contact{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 16px;
+      align-items:stretch;
+    }
+    .contact .card{height:100%}
+    .field{
+      display:flex;
+      flex-direction:column;
+      gap:6px;
+      margin-bottom: 12px;
+    }
+    label{font-size: 13px; color: var(--muted); font-weight: 700}
+    input, textarea{
+      width:100%;
+      padding: 12px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.20);
+      color: var(--text);
+      outline: none;
+      font-size: 14px;
+    }
+    textarea{min-height: 120px; resize: vertical}
+    input:focus, textarea:focus{border-color: rgba(99,102,241,.60)}
+    .note{color:var(--muted); font-size: 13px; line-height:1.6}
+
+    /* Footer */
+    footer{
+      padding: 26px 0 46px;
+      border-top: 1px solid rgba(34,48,77,.7);
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .footer-grid{
+      display:flex; align-items:flex-start; justify-content:space-between;
+      gap:16px; flex-wrap:wrap;
+    }
+    .footer-links{
+      display:flex; gap:14px; flex-wrap:wrap;
+    }
+    .footer-links a{
+      color: var(--muted);
+      text-decoration:none;
+      font-weight:700;
+    }
+    .footer-links a:hover{color: var(--text)}
+
+    /* Responsive */
+    @media (max-width: 940px){
+      .hero-grid{grid-template-columns: 1fr}
+      .grid{grid-template-columns: 1fr}
+      .split{grid-template-columns: 1fr}
+      .portfolio{grid-template-columns: 1fr}
+      .contact{grid-template-columns: 1fr}
+      .nav-links{display:none}
+    }
+  </style>
 </head>
 
 <body>
+  <!-- NAV -->
+  <div class="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a class="brand" href="#top" aria-label="Tecnomi Home">
+          <div class="logo" aria-hidden="true"></div>
+          <div>
+            <strong>Tecnomi</strong><br/>
+            <span style="color:var(--muted); font-weight:700; font-size:12px;">AI • Mobile • Automation</span>
+          </div>
+        </a>
 
-<section>
-<h1>AI-Powered Mobile App Development</h1>
-<p>We build intelligent mobile applications and automation systems that help businesses scale, reduce costs, and move faster.</p>
-<a href="mailto:your@email.com" class="button">Contact Us</a>
-</section>
+        <div class="nav-links" aria-label="Primary navigation">
+          <a href="#services">Services</a>
+          <a href="#process">Process</a>
+          <a href="#work">Work</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </div>
 
-<section>
-<h2>Our Services</h2>
-<div class="services">
-<div class="card">
-<h3>Mobile Apps</h3>
-<p>iOS & Android apps built with scalable architecture and clean UI.</p>
-</div>
-<div class="card">
-<h3>AI Integration</h3>
-<p>Smart assistants, automation tools, and advanced AI features.</p>
-</div>
-<div class="card">
-<h3>Business Automation</h3>
-<p>Custom internal tools and workflow automation systems.</p>
-</div>
-</div>
-</section>
+        <a class="btn btn-primary" href="#contact">Get a Quote</a>
+      </div>
+    </div>
+  </div>
 
-<section>
-<h2>Why Choose Us</h2>
-<p>Fast delivery, modern design, strong technical foundation, and AI-driven innovation. We turn ideas into scalable digital products.</p>
-</section>
+  <!-- HERO -->
+  <div id="top" class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <span class="pill">✅ Mobile App Development • ✅ AI Integrations • ✅ Automation</span>
+          <h1>Build smarter mobile apps with AI and automation.</h1>
+          <p>
+            Tecnomi is a mobile app development studio focused on <b>AI-powered features</b>, reliable engineering,
+            and workflow automation. We help founders and businesses launch apps faster and scale with confidence.
+          </p>
 
-<footer>
-© 2026 Tecnomi LLC. All rights reserved.
-</footer>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Start a Project</a>
+            <a class="btn" href="#services">Explore Services</a>
+          </div>
 
+          <div class="metrics" aria-label="Highlights">
+            <div class="metric"><b>Modern stacks</b> Flutter, Android, APIs</div>
+            <div class="metric"><b>AI-ready</b> LLMs, vision, doc parsing</div>
+            <div class="metric"><b>Automation</b> dashboards & workflows</div>
+          </div>
+        </div>
+
+        <div class="hero-card" aria-label="What you get">
+          <div class="tag">Delivery-focused • Production-ready</div>
+          <h3>What we deliver</h3>
+          <ul>
+            <li>Clean UI/UX and fast performance</li>
+            <li>Scalable architecture and maintainable code</li>
+            <li>AI features designed for real user value</li>
+            <li>Store-ready releases and post-launch support</li>
+          </ul>
+          <div class="mini">
+            <b style="color:var(--text)">Typical engagements:</b> MVP builds, feature upgrades, AI integration, automation tools.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Services</h2>
+          <p>Everything you need to go from idea → shipped product, with a strong technical foundation.</p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <div class="icon">📱</div>
+          <h3>Mobile App Development</h3>
+          <p>iOS and Android apps built for performance, reliability, and a polished user experience—ideal for MVPs and production releases.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon green">🤖</div>
+          <h3>AI Features & Integrations</h3>
+          <p>Chat assistants, smart recommendations, OCR/image understanding, document workflows, and LLM integrations tailored to your app.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon amber">⚙️</div>
+          <h3>Automation & Internal Tools</h3>
+          <p>Dashboards, API integrations, data pipelines, and workflow automation that reduce manual work and improve business visibility.</p>
+        </div>
+      </div>
+
+      <div style="height:16px"></div>
+
+      <div class="split">
+        <div class="card">
+          <h3>Best for</h3>
+          <ul class="list">
+            <li>Founders launching an MVP fast (without cutting quality)</li>
+            <li>Businesses upgrading an existing app with AI features</li>
+            <li>Teams that need automation for operations and reporting</li>
+            <li>Apps monetized with ads (AdMob) or in-app purchases</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Technology</h3>
+          <ul class="list">
+            <li>Flutter, Android, and modern backend patterns</li>
+            <li>REST APIs, webhooks, and third-party integrations</li>
+            <li>AI services (LLMs, vision, classification, summarization)</li>
+            <li>Analytics, crash reporting, and performance monitoring</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Process</h2>
+          <p>Clear steps, transparent communication, and predictable delivery.</p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <div class="icon">1</div>
+          <h3>Discovery</h3>
+          <p>Goals, requirements, timeline, and scope. We identify risks early and define success metrics.</p>
+        </div>
+        <div class="card">
+          <div class="icon green">2</div>
+          <h3>Design</h3>
+          <p>User flows, UI direction, and a simple prototype. We prioritize clarity and usability.</p>
+        </div>
+        <div class="card">
+          <div class="icon amber">3</div>
+          <h3>Build & Launch</h3>
+          <p>Agile development with weekly updates, testing, store-ready releases, and post-launch improvements.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK / PORTFOLIO -->
+  <section id="work">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Work</h2>
+          <p>Examples of the kinds of products we build. Replace these with your real apps anytime.</p>
+        </div>
+      </div>
+
+      <div class="portfolio">
+        <div class="project">
+          <h3>Auto Loan Calculator</h3>
+          <p style="color:var(--muted); line-height:1.7; margin:0;">
+            A clean utility app focused on fast calculations, user-friendly UX, and ad-based monetization.
+          </p>
+          <div class="badges">
+            <span class="badge">Flutter</span>
+            <span class="badge">AdMob</span>
+            <span class="badge">Optimized UX</span>
+          </div>
+        </div>
+
+        <div class="project">
+          <h3>AI Mobile Mechanic Assistant</h3>
+          <p style="color:var(--muted); line-height:1.7; margin:0;">
+            An AI-guided diagnostic experience: reads OBD2 results, prioritizes likely causes, and recommends next steps.
+          </p>
+          <div class="badges">
+            <span class="badge">AI</span>
+            <span class="badge">Vision/OCR</span>
+            <span class="badge">Workflow</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="height:16px"></div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Quality standards</h3>
+          <p>Clean architecture, robust error handling, and performance-minded implementation—built to maintain and extend.</p>
+        </div>
+        <div class="card">
+          <h3>Security & privacy</h3>
+          <p>Data minimization, secure storage, and clear policies. We can design features around your compliance needs.</p>
+        </div>
+        <div class="card">
+          <h3>Post-launch support</h3>
+          <p>Analytics, crash monitoring, user feedback loops, and iterative improvements based on real usage data.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>What clients value</h2>
+          <p>Professional delivery, clear communication, and solutions that work in production.</p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Fast + organized</h3>
+          <p>“Clear timelines, weekly progress, and a great balance between speed and quality.”</p>
+        </div>
+        <div class="card">
+          <h3>Strong technical execution</h3>
+          <p>“The codebase was clean, scalable, and easy to maintain after launch.”</p>
+        </div>
+        <div class="card">
+          <h3>Real-world outcomes</h3>
+          <p>“They helped us automate manual processes and reduce support load significantly.”</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>FAQ</h2>
+          <p>Quick answers to common questions before starting.</p>
+        </div>
+      </div>
+
+      <details>
+        <summary>Do you build for both Android and iOS?</summary>
+        <p>Yes. We frequently use Flutter for a single codebase across platforms, and we can also work with native stacks when required.</p>
+      </details>
+
+      <details>
+        <summary>Can you add AI features to an existing app?</summary>
+        <p>Yes. We can integrate LLMs, vision/OCR, classification, summarization, and other AI workflows—designed for practical user value and cost control.</p>
+      </details>
+
+      <details>
+        <summary>How do projects usually start?</summary>
+        <p>We begin with a short discovery call, define scope and priorities, then propose a clear plan and deliver in weekly milestones.</p>
+      </details>
+
+      <details>
+        <summary>Can you help with Google Play publishing and AdMob?</summary>
+        <p>Yes. We can prepare release builds, store assets, privacy policy requirements, and ensure AdMob is correctly integrated and compliant.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Contact</h2>
+          <p>Tell us what you’re building. We’ll respond with next steps and a clear plan.</p>
+        </div>
+      </div>
+
+      <div class="contact">
+        <div class="card">
+          <h3>Send a message</h3>
+          <p class="note">This form opens your email client. If it doesn’t open, email us directly at <b>tecnomiusa@gmail.com</b>.</p>
+
+          <form action="mailto:tecnomiusa@gmail.com" method="post" enctype="text/plain">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="Name" placeholder="Your name" required />
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="Email" type="email" placeholder="you@email.com" required />
+            </div>
+
+            <div class="field">
+              <label for="msg">Project summary</label>
+              <textarea id="msg" name="Message" placeholder="What do you want to build? Platform, features, timeline, budget…" required></textarea>
+            </div>
+
+            <button class="btn btn-primary" type="submit">Email Tecnomi</button>
+            <span style="display:inline-block; width:10px"></span>
+            <a class="btn" href="mailto:tecnomiusa@gmail.com?subject=Project%20Inquiry%20-%20Tecnomi&body=Hi%20Tecnomi%2C%0A%0AI%20want%20to%20build%20a%20mobile%20app%20with%20AI%20and%20automation.%0A%0AProject%20details%3A%20...%0A%0AThanks!">Open Email</a>
+          </form>
+        </div>
+
+        <div class="card">
+          <h3>Business info</h3>
+          <ul class="list">
+            <li><b>Email:</b> tecnomiusa@gmail.com</li>
+            <li><b>Services:</b> AI features, mobile apps, automation</li>
+            <li><b>Delivery:</b> MVPs, feature upgrades, long-term support</li>
+            <li><b>Location:</b> United States (remote)</li>
+          </ul>
+
+          <div style="height:12px"></div>
+
+          <div class="card" style="background: rgba(0,0,0,.18); border-color: rgba(255,255,255,.10)">
+            <h3 style="margin:0 0 8px">Next steps</h3>
+            <p style="margin:0; color:var(--muted); line-height:1.7; font-size:14px">
+              Share your idea, required features, timeline, and target platform. We’ll reply with a recommended approach and a project plan.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIVACY POLICY -->
+  <section id="privacy">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Privacy Policy (Summary)</h2>
+          <p>This is a general website privacy statement. If you need a dedicated app privacy policy page for Google Play/AdMob, tell me and I’ll generate it.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <p>
+          Tecnomi respects your privacy. This website may collect basic information you voluntarily submit (such as your name and email)
+          when you contact us. We use this information only to respond to your inquiry and provide services.
+        </p>
+        <p>
+          We do not sell personal information. If we use third-party services (such as analytics or hosting), they may process limited
+          technical data (e.g., IP address, browser type) to operate and secure the site. You can contact us at
+          <b>tecnomiusa@gmail.com</b> to request updates or deletion of your submitted information.
+        </p>
+        <p style="margin-bottom:0;">
+          <b>Contact:</b> tecnomiusa@gmail.com
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div style="display:flex; align-items:center; gap:10px;">
+            <div class="logo" aria-hidden="true" style="width:30px;height:30px;border-radius:10px;"></div>
+            <div>
+              <div style="font-weight:900; color:rgba(255,255,255,.92)">Tecnomi</div>
+              <div style="font-weight:700;">AI • Mobile • Automation</div>
+            </div>
+          </div>
+          <div style="margin-top:10px;">© <span id="year"></span> Tecnomi. All rights reserved.</div>
+        </div>
+
+        <div class="footer-links" aria-label="Footer links">
+          <a href="#services">Services</a>
+          <a href="#process">Process</a>
+          <a href="#work">Work</a>
+          <a href="#faq">FAQ</a>
+          <a href="#privacy">Privacy</a>
+          <a href="mailto:tecnomiusa@gmail.com">Email</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
