@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CarDiag AI – Política de Privacidad y Términos</title>
+  <meta name="description" content="Política de Privacidad y Términos y Condiciones de CarDiag AI." />
+  <style>
+    :root { --bg:#0b1220; --card:#111a2e; --text:#eaf0ff; --muted:#b7c2dd; --accent:#7aa2ff; }
+    body{ margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; background:linear-gradient(180deg,var(--bg),#070c16); color:var(--text); }
+    main{ max-width: 980px; margin: 0 auto; padding: 32px 18px 60px; }
+    header{ padding: 18px 0 10px; }
+    h1{ margin:0 0 6px; font-size: 28px; letter-spacing:.2px; }
+    .sub{ color:var(--muted); margin:0 0 18px; }
+    .card{ background: rgba(17,26,46,.92); border:1px solid rgba(122,162,255,.22); border-radius:14px; padding:18px; margin: 14px 0; box-shadow: 0 10px 30px rgba(0,0,0,.28); }
+    h2{ margin: 0 0 10px; font-size: 20px; }
+    h3{ margin: 18px 0 8px; font-size: 16px; color: #d7e2ff; }
+    p,li{ line-height:1.55; color:var(--text); }
+    ul{ margin: 8px 0 0 18px; }
+    a{ color: var(--accent); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+    code{ background: rgba(255,255,255,.06); padding: 2px 6px; border-radius: 8px; }
+    .muted{ color:var(--muted); }
+    footer{ margin-top: 22px; color: var(--muted); font-size: 13px; }
+    .pill{ display:inline-block; padding:4px 10px; border-radius:999px; background:rgba(122,162,255,.12); border:1px solid rgba(122,162,255,.25); color:#dbe6ff; font-size:12px; }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="pill">Documento legal</div>
+    <h1>CarDiag AI – Política de Privacidad y Términos</h1>
+    <p class="sub"><strong>Última actualización:</strong> 25 de febrero de 2026</p>
+  </header>
+
+  <section class="card" id="intro">
+    <h2>1) Información general</h2>
+    <p>
+      Este documento describe cómo <strong>CarDiag AI</strong> (“la App”) recopila, usa y protege la información,
+      y los términos bajo los cuales puedes usar la App.
+    </p>
+    <p class="muted">
+      Responsable/Desarrollador: <strong>[TU_EMPRESA]</strong><br/>
+      Sitio web: <strong>[TU_URL]</strong><br/>
+      Contacto: <a href="mailto:teconomiusa@gmail.com">teconomiusa@gmail.com</a>
+    </p>
+  </section>
+
+  <!-- ======================= PRIVACY POLICY ======================= -->
+  <section class="card" id="privacy">
+    <h2>2) Política de Privacidad</h2>
+
+    <h3>2.1 Qué hace CarDiag AI</h3>
+    <p>
+      CarDiag AI ayuda a interpretar información de diagnóstico automotriz (por ejemplo, códigos OBD-II),
+      y puede ofrecer explicaciones, posibles causas y recomendaciones generales.
+    </p>
+
+    <h3>2.2 Datos que podemos recopilar</h3>
+    <p>Dependiendo de las funciones que uses, la App puede tratar las siguientes categorías:</p>
+    <ul>
+      <li>
+        <strong>Datos de diagnóstico del vehículo</strong> (ej.: códigos OBD-II, descripciones, lecturas/valores,
+        información que ingreses o subas). Estos datos no deberían incluir información personal, pero podrían
+        ser sensibles para ti.
+      </li>
+      <li>
+        <strong>Imágenes</strong> (si usas funciones de “escaneo por foto”): fotos que subas para extraer texto/códigos.
+      </li>
+      <li>
+        <strong>Datos de uso y rendimiento</strong> (ej.: eventos básicos de uso, fallos/crashes, rendimiento)
+        para mejorar estabilidad y experiencia.
+      </li>
+      <li>
+        <strong>Datos de compras</strong> (si hay suscripciones/compras dentro de la app): estado de suscripción,
+        confirmaciones y tokens que proveen Google Play / App Store para validar la compra.
+      </li>
+      <li>
+        <strong>Publicidad</strong> (si la App muestra anuncios): identificadores publicitarios y métricas agregadas
+        para mostrar anuncios y medir su rendimiento (según corresponda y configuración del dispositivo).
+      </li>
+    </ul>
+
+    <h3>2.3 Datos que NO queremos recopilar</h3>
+    <p>
+      CarDiag AI no está diseñada para recopilar información altamente sensible (por ejemplo, datos médicos,
+      biométricos, documentos de identidad, etc.). Por favor, <strong>no subas</strong> contenido personal que no sea
+      necesario para el diagnóstico.
+    </p>
+
+    <h3>2.4 Cómo usamos la información</h3>
+    <ul>
+      <li>Proveer las funciones principales (análisis/interpretación de códigos y datos).</li>
+      <li>Mejorar precisión, rendimiento, estabilidad y seguridad.</li>
+      <li>Administrar suscripciones/beneficios del plan (si aplica).</li>
+      <li>Soporte al usuario y respuesta a solicitudes.</li>
+      <li>Cumplimiento legal y prevención de fraude/abuso.</li>
+    </ul>
+
+    <h3>2.5 Base legal (para usuarios donde aplique)</h3>
+    <ul>
+      <li><strong>Ejecución del servicio</strong>: para operar la App y entregar resultados.</li>
+      <li><strong>Interés legítimo</strong>: mejora y seguridad del servicio.</li>
+      <li><strong>Consentimiento</strong>: cuando sea requerido (por ejemplo, permisos del dispositivo o personalización de anuncios).</li>
+      <li><strong>Cumplimiento legal</strong>: cuando sea necesario por ley.</li>
+    </ul>
+
+    <h3>2.6 Compartición de información</h3>
+    <p>
+      Podemos compartir información limitada con <strong>proveedores</strong> que nos ayudan a operar la App
+      (por ejemplo: analítica, reportes de fallos, infraestructura en la nube, pagos, publicidad),
+      siempre bajo términos de confidencialidad y uso restringido.
+    </p>
+    <p>
+      <strong>No vendemos</strong> tu información personal. Podríamos divulgar información si la ley lo exige
+      o para proteger derechos, seguridad y prevenir fraude.
+    </p>
+
+    <h3>2.7 Publicidad</h3>
+    <p>
+      Si usas un plan con anuncios, la App puede mostrar publicidad. Los socios publicitarios podrían usar
+      identificadores del dispositivo (según la configuración y permisos) para limitar frecuencia,
+      medir rendimiento y/o personalizar anuncios. Puedes ajustar preferencias de anuncios
+      desde la configuración de tu dispositivo.
+    </p>
+
+    <h3>2.8 Compras y suscripciones</h3>
+    <p>
+      Las compras y suscripciones se procesan a través de la tienda (por ejemplo, Google Play).
+      Nosotros recibimos señales/tokens necesarios para validar el estado de la suscripción y habilitar funciones.
+    </p>
+
+    <h3>2.9 Retención y eliminación</h3>
+    <p>
+      Conservamos los datos solo el tiempo necesario para brindar el servicio, cumplir obligaciones legales
+      y resolver disputas. Puedes solicitar eliminación o acceso escribiendo a
+      <a href="mailto:teconomiusa@gmail.com">teconomiusa@gmail.com</a>.
+    </p>
+
+    <h3>2.10 Seguridad</h3>
+    <p>
+      Aplicamos medidas técnicas y organizativas razonables para proteger información contra acceso no autorizado,
+      alteración o pérdida. Aun así, ningún sistema es 100% infalible.
+    </p>
+
+    <h3>2.11 Derechos del usuario</h3>
+    <p>Según tu jurisdicción, puedes tener derechos como:</p>
+    <ul>
+      <li>Acceso, corrección o eliminación de datos.</li>
+      <li>Oposición o limitación de tratamiento.</li>
+      <li>Portabilidad (donde aplique).</li>
+      <li>Retiro de consentimiento (cuando el tratamiento dependa de ello).</li>
+    </ul>
+    <p class="muted">Para ejercerlos: <a href="mailto:teconomiusa@gmail.com">teconomiusa@gmail.com</a>.</p>
+
+    <h3>2.12 Menores de edad</h3>
+    <p>
+      CarDiag AI no está dirigida a menores de 13 años (o la edad mínima aplicable).
+      No recopilamos intencionalmente información de menores. Si crees que un menor nos proporcionó datos,
+      contáctanos para eliminarlos.
+    </p>
+
+    <h3>2.13 Cambios a esta política</h3>
+    <p>
+      Podemos actualizar esta Política de Privacidad ocasionalmente. Publicaremos cambios en esta página
+      y actualizaremos la fecha de “Última actualización”.
+    </p>
+  </section>
+
+  <!-- ======================= TERMS ======================= -->
+  <section class="card" id="terms">
+    <h2>3) Términos y Condiciones</h2>
+
+    <h3>3.1 Aceptación</h3>
+    <p>
+      Al descargar o usar CarDiag AI, aceptas estos Términos. Si no estás de acuerdo, no uses la App.
+    </p>
+
+    <h3>3.2 Uso permitido</h3>
+    <ul>
+      <li>Usar la App para fines personales o profesionales de diagnóstico automotriz.</li>
+      <li>No usarla para actividades ilegales, fraudulentas o que afecten la seguridad de terceros.</li>
+      <li>No intentar vulnerar, descompilar, interferir o explotar la App o sus servicios.</li>
+    </ul>
+
+    <h3>3.3 Advertencia importante (no es asesoría mecánica definitiva)</h3>
+    <p>
+      La App ofrece información <strong>orientativa</strong> basada en datos proporcionados por el usuario/dispositivo
+      y reglas/modelos. Los resultados pueden ser incompletos o incorrectos.
+      <strong>No garantizamos</strong> diagnósticos exactos.
+    </p>
+    <p>
+      Antes de ejecutar reparaciones, decisiones de seguridad o inversiones, consulta un mecánico calificado.
+      El uso de la App es bajo tu propio riesgo.
+    </p>
+
+    <h3>3.4 Disponibilidad</h3>
+    <p>
+      Podemos modificar, suspender o interrumpir funciones de la App en cualquier momento por mantenimiento,
+      mejoras o causas fuera de nuestro control.
+    </p>
+
+    <h3>3.5 Suscripciones, planes y facturación</h3>
+    <p>
+      Si la App ofrece planes (por ejemplo: Gratis con anuncios, Básico, Pro, Premium), el precio y beneficios
+      se muestran dentro de la App y/o en la tienda. La facturación y renovaciones se administran por la tienda.
+    </p>
+    <ul>
+      <li>Las suscripciones se renuevan automáticamente salvo cancelación en la tienda.</li>
+      <li>Las políticas de reembolso dependen de la tienda y la ley aplicable.</li>
+      <li>Podemos actualizar precios/planes, respetando reglas de la tienda y notificaciones requeridas.</li>
+    </ul>
+
+    <h3>3.6 Propiedad intelectual</h3>
+    <p>
+      La App, su marca, diseño, contenido y software son propiedad de <strong>[TU_EMPRESA]</strong> o sus licenciantes.
+      No se otorga ninguna licencia salvo el derecho limitado a usar la App según estos Términos.
+    </p>
+
+    <h3>3.7 Limitación de responsabilidad</h3>
+    <p>
+      En la máxima medida permitida por ley, <strong>[TU_EMPRESA]</strong> no será responsable por daños indirectos,
+      incidentales, especiales o consecuentes derivados del uso o imposibilidad de uso de la App.
+    </p>
+
+    <h3>3.8 Terminación</h3>
+    <p>
+      Podemos suspender o terminar el acceso si hay incumplimiento de estos Términos o uso abusivo.
+      Puedes dejar de usar la App en cualquier momento.
+    </p>
+
+    <h3>3.9 Ley aplicable</h3>
+    <p>
+      Estos Términos se regirán por las leyes aplicables según tu jurisdicción y/o la del desarrollador,
+      salvo que la ley requiera otra cosa.
+    </p>
+
+    <h3>3.10 Contacto</h3>
+    <p>
+      Para preguntas, soporte o solicitudes relacionadas con privacidad:
+      <a href="mailto:teconomiusa@gmail.com">teconomiusa@gmail.com</a>.
+    </p>
+  </section>
+
+  <!-- Optional: Data Safety summary to help you fill Play Console -->
+  <section class="card" id="datasafety">
+    <h2>4) Resumen para “Data Safety” (Google Play)</h2>
+    <p class="muted">Esto es un resumen informativo para ayudarte a completar el formulario. Ajusta según tu implementación real.</p>
+    <ul>
+      <li><strong>Datos recopilados (posibles):</strong> datos de app activity/analytics, crash logs, compras/suscripciones, identificadores publicitarios (si hay ads), contenido del usuario (códigos OBD, texto, imágenes subidas).</li>
+      <li><strong>Propósito:</strong> funcionalidad de la app, analítica, prevención de fraude, publicidad (si aplica), soporte, mejoras.</li>
+      <li><strong>Compartición:</strong> con proveedores (pagos, analítica, ads) según corresponda.</li>
+      <li><strong>Seguridad:</strong> medidas razonables y acceso limitado.</li>
+      <li><strong>Eliminación:</strong> solicitud por email: <a href="mailto:teconomiusa@gmail.com">teconomiusa@gmail.com</a>.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© <span id="y"></span> [TU_EMPRESA]. Todos los derechos reservados.</p>
+  </footer>
+</main>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
