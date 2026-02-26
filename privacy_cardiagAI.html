@@ -36,7 +36,7 @@
   <section class="card" id="intro">
     <h2>1) Información general</h2>
     <p>
-      Este documento describe cómo <strong>CarDiag AI</strong> (“la App”) recopila, usa y protege la información,
+      Este documento describe cómo <strong>CarDiag AI</strong> (“la App”) recopila, usa, comparte y protege la información,
       y los términos bajo los cuales puedes usar la App.
     </p>
     <p class="muted">
@@ -53,117 +53,108 @@
     <h3>2.1 Qué hace CarDiag AI</h3>
     <p>
       CarDiag AI ayuda a interpretar información de diagnóstico automotriz (por ejemplo, códigos OBD-II),
-      y puede ofrecer explicaciones, posibles causas y recomendaciones generales.
+      y puede ofrecer explicaciones, posibles causas y recomendaciones generales usando tecnología de inteligencia artificial.
     </p>
 
     <h3>2.2 Datos que podemos recopilar</h3>
-    <p>Dependiendo de las funciones que uses, la App puede tratar las siguientes categorías:</p>
+    <p>Según las funciones que uses, la App puede recopilar o procesar:</p>
     <ul>
       <li>
-        <strong>Datos de diagnóstico del vehículo</strong> (ej.: códigos OBD-II, descripciones, lecturas/valores,
-        información que ingreses o subas). Estos datos no deberían incluir información personal, pero podrían
-        ser sensibles para ti.
+        <strong>Contenido que proporcionas</strong>: códigos OBD-II, descripciones, lecturas, texto que ingreses,
+        y/o <strong>imágenes</strong> que subas para extraer códigos o información.
       </li>
       <li>
-        <strong>Imágenes</strong> (si usas funciones de “escaneo por foto”): fotos que subas para extraer texto/códigos.
+        <strong>Historial dentro de la App</strong> (si lo habilitas): registros de análisis/diagnósticos guardados en
+        <strong>Firebase</strong> (por ejemplo: fecha, código, notas, resultados).
       </li>
       <li>
-        <strong>Datos de uso y rendimiento</strong> (ej.: eventos básicos de uso, fallos/crashes, rendimiento)
-        para mejorar estabilidad y experiencia.
+        <strong>Datos de uso y diagnóstico de la app</strong>: eventos básicos de uso, rendimiento, y reportes de fallos
+        para mejorar estabilidad (por ejemplo, Firebase Analytics/Crash Reporting si está habilitado).
       </li>
       <li>
-        <strong>Datos de compras</strong> (si hay suscripciones/compras dentro de la app): estado de suscripción,
-        confirmaciones y tokens que proveen Google Play / App Store para validar la compra.
+        <strong>Datos de publicidad</strong> (AdMob): identificador publicitario del dispositivo (según configuración),
+        interacciones con anuncios, y métricas agregadas para mostrar y medir anuncios.
       </li>
       <li>
-        <strong>Publicidad</strong> (si la App muestra anuncios): identificadores publicitarios y métricas agregadas
-        para mostrar anuncios y medir su rendimiento (según corresponda y configuración del dispositivo).
+        <strong>Datos técnicos del dispositivo</strong>: información como versión del sistema, modelo, idioma,
+        identificadores limitados y datos de red necesarios para operar y proteger el servicio.
       </li>
     </ul>
 
-    <h3>2.3 Datos que NO queremos recopilar</h3>
-    <p>
-      CarDiag AI no está diseñada para recopilar información altamente sensible (por ejemplo, datos médicos,
-      biométricos, documentos de identidad, etc.). Por favor, <strong>no subas</strong> contenido personal que no sea
-      necesario para el diagnóstico.
-    </p>
-
-    <h3>2.4 Cómo usamos la información</h3>
+    <h3>2.3 Cómo usamos la información</h3>
     <ul>
-      <li>Proveer las funciones principales (análisis/interpretación de códigos y datos).</li>
-      <li>Mejorar precisión, rendimiento, estabilidad y seguridad.</li>
-      <li>Administrar suscripciones/beneficios del plan (si aplica).</li>
-      <li>Soporte al usuario y respuesta a solicitudes.</li>
-      <li>Cumplimiento legal y prevención de fraude/abuso.</li>
+      <li><strong>Funcionalidad</strong>: generar análisis/explicaciones y mostrar resultados.</li>
+      <li><strong>IA</strong>: enviar parte del contenido (por ejemplo, códigos/lecturas/texto y, si aplica, texto extraído de imágenes) a un servicio de IA para producir la respuesta.</li>
+      <li><strong>Guardar historial</strong> (si lo usas): almacenar y mostrar tus diagnósticos en Firebase.</li>
+      <li><strong>Mejora y seguridad</strong>: analítica, solución de errores, prevención de abuso/fraude.</li>
+      <li><strong>Publicidad</strong>: mostrar anuncios (planes con ads) y medir su rendimiento.</li>
+      <li><strong>Soporte</strong>: responder solicitudes enviadas por email.</li>
     </ul>
 
-    <h3>2.5 Base legal (para usuarios donde aplique)</h3>
+    <h3>2.4 Servicios de terceros que usamos</h3>
+    <p>CarDiag AI puede integrar servicios de terceros para operar:</p>
     <ul>
-      <li><strong>Ejecución del servicio</strong>: para operar la App y entregar resultados.</li>
-      <li><strong>Interés legítimo</strong>: mejora y seguridad del servicio.</li>
-      <li><strong>Consentimiento</strong>: cuando sea requerido (por ejemplo, permisos del dispositivo o personalización de anuncios).</li>
-      <li><strong>Cumplimiento legal</strong>: cuando sea necesario por ley.</li>
+      <li><strong>OpenAI API</strong>: procesamiento de contenido para generar explicaciones/diagnósticos asistidos por IA.</li>
+      <li><strong>Google Firebase</strong>: base de datos/almacenamiento (y opcionalmente analítica y reportes de fallos).</li>
+      <li><strong>Google AdMob</strong>: publicación y medición de anuncios (si aplica).</li>
     </ul>
-
-    <h3>2.6 Compartición de información</h3>
-    <p>
-      Podemos compartir información limitada con <strong>proveedores</strong> que nos ayudan a operar la App
-      (por ejemplo: analítica, reportes de fallos, infraestructura en la nube, pagos, publicidad),
-      siempre bajo términos de confidencialidad y uso restringido.
-    </p>
-    <p>
-      <strong>No vendemos</strong> tu información personal. Podríamos divulgar información si la ley lo exige
-      o para proteger derechos, seguridad y prevenir fraude.
+    <p class="muted">
+      Cada proveedor puede procesar ciertos datos como “encargado/proveedor” para prestar el servicio.
+      Recomendamos revisar también sus políticas.
     </p>
 
-    <h3>2.7 Publicidad</h3>
+    <h3>2.5 Qué se envía a la IA (OpenAI) y qué NO</h3>
     <p>
-      Si usas un plan con anuncios, la App puede mostrar publicidad. Los socios publicitarios podrían usar
-      identificadores del dispositivo (según la configuración y permisos) para limitar frecuencia,
-      medir rendimiento y/o personalizar anuncios. Puedes ajustar preferencias de anuncios
-      desde la configuración de tu dispositivo.
+      Para generar respuestas, podemos enviar a la IA información relacionada con el diagnóstico (por ejemplo: códigos OBD-II,
+      lecturas, síntomas escritos por el usuario y/o texto extraído de una imagen).
+      <strong>No está permitido</strong> que subas información innecesaria o altamente sensible (documentos, tarjetas,
+      contraseñas, etc.).
     </p>
 
-    <h3>2.8 Compras y suscripciones</h3>
+    <h3>2.6 Publicidad (AdMob)</h3>
     <p>
-      Las compras y suscripciones se procesan a través de la tienda (por ejemplo, Google Play).
-      Nosotros recibimos señales/tokens necesarios para validar el estado de la suscripción y habilitar funciones.
+      Si tu plan incluye anuncios, AdMob puede recopilar identificadores publicitarios y datos de interacción con anuncios
+      para <strong>mostrar</strong> anuncios, <strong>limitar frecuencia</strong> y <strong>medir</strong> rendimiento.
+      La personalización depende de tu configuración del dispositivo y de los permisos aplicables.
     </p>
 
-    <h3>2.9 Retención y eliminación</h3>
+    <h3>2.7 Dónde se almacenan los datos</h3>
     <p>
-      Conservamos los datos solo el tiempo necesario para brindar el servicio, cumplir obligaciones legales
-      y resolver disputas. Puedes solicitar eliminación o acceso escribiendo a
+      El historial y/o datos necesarios para la operación pueden almacenarse en <strong>Firebase</strong>.
+      Los datos pueden procesarse en servidores ubicados en distintas regiones según la infraestructura del proveedor.
+    </p>
+
+    <h3>2.8 Retención</h3>
+    <p>
+      Conservamos la información solo el tiempo necesario para operar la App, cumplir obligaciones legales,
+      y mejorar el servicio. Puedes solicitar eliminación o acceso escribiendo a
       <a href="mailto:teconomiusa@gmail.com">teconomiusa@gmail.com</a>.
     </p>
 
-    <h3>2.10 Seguridad</h3>
+    <h3>2.9 Seguridad</h3>
     <p>
-      Aplicamos medidas técnicas y organizativas razonables para proteger información contra acceso no autorizado,
-      alteración o pérdida. Aun así, ningún sistema es 100% infalible.
+      Aplicamos medidas razonables de seguridad (controles de acceso, reglas de base de datos, cifrado en tránsito),
+      pero ningún sistema es 100% infalible.
     </p>
 
-    <h3>2.11 Derechos del usuario</h3>
-    <p>Según tu jurisdicción, puedes tener derechos como:</p>
+    <h3>2.10 Derechos del usuario</h3>
+    <p>Según tu jurisdicción, puedes solicitar:</p>
     <ul>
       <li>Acceso, corrección o eliminación de datos.</li>
-      <li>Oposición o limitación de tratamiento.</li>
-      <li>Portabilidad (donde aplique).</li>
+      <li>Restricción u oposición al tratamiento (cuando aplique).</li>
       <li>Retiro de consentimiento (cuando el tratamiento dependa de ello).</li>
     </ul>
-    <p class="muted">Para ejercerlos: <a href="mailto:teconomiusa@gmail.com">teconomiusa@gmail.com</a>.</p>
+    <p class="muted">Solicitudes: <a href="mailto:teconomiusa@gmail.com">teconomiusa@gmail.com</a>.</p>
 
-    <h3>2.12 Menores de edad</h3>
+    <h3>2.11 Menores</h3>
     <p>
       CarDiag AI no está dirigida a menores de 13 años (o la edad mínima aplicable).
-      No recopilamos intencionalmente información de menores. Si crees que un menor nos proporcionó datos,
-      contáctanos para eliminarlos.
+      No recopilamos intencionalmente datos de menores.
     </p>
 
-    <h3>2.13 Cambios a esta política</h3>
+    <h3>2.12 Cambios</h3>
     <p>
-      Podemos actualizar esta Política de Privacidad ocasionalmente. Publicaremos cambios en esta página
-      y actualizaremos la fecha de “Última actualización”.
+      Podemos actualizar esta Política. Publicaremos cambios aquí y actualizaremos la fecha.
     </p>
   </section>
 
@@ -173,86 +164,88 @@
 
     <h3>3.1 Aceptación</h3>
     <p>
-      Al descargar o usar CarDiag AI, aceptas estos Términos. Si no estás de acuerdo, no uses la App.
+      Al usar CarDiag AI, aceptas estos Términos. Si no estás de acuerdo, no uses la App.
     </p>
 
-    <h3>3.2 Uso permitido</h3>
+    <h3>3.2 Uso permitido y restricciones</h3>
     <ul>
-      <li>Usar la App para fines personales o profesionales de diagnóstico automotriz.</li>
-      <li>No usarla para actividades ilegales, fraudulentas o que afecten la seguridad de terceros.</li>
-      <li>No intentar vulnerar, descompilar, interferir o explotar la App o sus servicios.</li>
+      <li>No uses la App para fines ilegales, para vulnerar sistemas, o para recolectar datos de terceros sin permiso.</li>
+      <li>No intentes descompilar, modificar, interferir o explotar la App.</li>
+      <li>Eres responsable del contenido que subes (texto/imágenes) y de tener derechos para usarlo.</li>
     </ul>
 
-    <h3>3.3 Advertencia importante (no es asesoría mecánica definitiva)</h3>
+    <h3>3.3 Aviso importante sobre IA (limitaciones)</h3>
     <p>
-      La App ofrece información <strong>orientativa</strong> basada en datos proporcionados por el usuario/dispositivo
-      y reglas/modelos. Los resultados pueden ser incompletos o incorrectos.
-      <strong>No garantizamos</strong> diagnósticos exactos.
-    </p>
-    <p>
-      Antes de ejecutar reparaciones, decisiones de seguridad o inversiones, consulta un mecánico calificado.
-      El uso de la App es bajo tu propio riesgo.
+      La App ofrece información <strong>orientativa</strong>. Las respuestas generadas por IA pueden contener errores
+      u omisiones. No garantizamos diagnósticos exactos ni reparaciones correctas.
+      Para decisiones críticas, consulta un mecánico calificado.
     </p>
 
     <h3>3.4 Disponibilidad</h3>
     <p>
-      Podemos modificar, suspender o interrumpir funciones de la App en cualquier momento por mantenimiento,
-      mejoras o causas fuera de nuestro control.
+      Podemos cambiar, suspender o eliminar funciones por mantenimiento, mejoras o razones operativas.
     </p>
 
-    <h3>3.5 Suscripciones, planes y facturación</h3>
+    <h3>3.5 Publicidad</h3>
     <p>
-      Si la App ofrece planes (por ejemplo: Gratis con anuncios, Básico, Pro, Premium), el precio y beneficios
-      se muestran dentro de la App y/o en la tienda. La facturación y renovaciones se administran por la tienda.
+      La App puede mostrar anuncios. El contenido de anuncios es responsabilidad de los anunciantes y de la red publicitaria.
     </p>
-    <ul>
-      <li>Las suscripciones se renuevan automáticamente salvo cancelación en la tienda.</li>
-      <li>Las políticas de reembolso dependen de la tienda y la ley aplicable.</li>
-      <li>Podemos actualizar precios/planes, respetando reglas de la tienda y notificaciones requeridas.</li>
-    </ul>
 
     <h3>3.6 Propiedad intelectual</h3>
     <p>
-      La App, su marca, diseño, contenido y software son propiedad de <strong>[TU_EMPRESA]</strong> o sus licenciantes.
-      No se otorga ninguna licencia salvo el derecho limitado a usar la App según estos Términos.
+      La App, marca, diseño y software pertenecen a <strong>[TU_EMPRESA]</strong> o sus licenciantes.
+      Se concede una licencia limitada para uso personal conforme a estos Términos.
     </p>
 
     <h3>3.7 Limitación de responsabilidad</h3>
     <p>
       En la máxima medida permitida por ley, <strong>[TU_EMPRESA]</strong> no será responsable por daños indirectos,
-      incidentales, especiales o consecuentes derivados del uso o imposibilidad de uso de la App.
+      incidentales o consecuentes derivados del uso o imposibilidad de uso de la App.
     </p>
 
     <h3>3.8 Terminación</h3>
     <p>
-      Podemos suspender o terminar el acceso si hay incumplimiento de estos Términos o uso abusivo.
-      Puedes dejar de usar la App en cualquier momento.
+      Podemos suspender el acceso ante uso abusivo o incumplimiento. Puedes dejar de usar la App en cualquier momento.
     </p>
 
-    <h3>3.9 Ley aplicable</h3>
+    <h3>3.9 Contacto</h3>
     <p>
-      Estos Términos se regirán por las leyes aplicables según tu jurisdicción y/o la del desarrollador,
-      salvo que la ley requiera otra cosa.
-    </p>
-
-    <h3>3.10 Contacto</h3>
-    <p>
-      Para preguntas, soporte o solicitudes relacionadas con privacidad:
-      <a href="mailto:teconomiusa@gmail.com">teconomiusa@gmail.com</a>.
+      Privacidad/Soporte: <a href="mailto:teconomiusa@gmail.com">teconomiusa@gmail.com</a>.
     </p>
   </section>
 
-  <!-- Optional: Data Safety summary to help you fill Play Console -->
+  <!-- ======================= PLAY DATA SAFETY HELPER ======================= -->
   <section class="card" id="datasafety">
-    <h2>4) Resumen para “Data Safety” (Google Play)</h2>
-    <p class="muted">Esto es un resumen informativo para ayudarte a completar el formulario. Ajusta según tu implementación real.</p>
+    <h2>4) Resumen para completar “Data Safety” (Google Play)</h2>
+    <p class="muted">
+      Ajusta según tu implementación real. Esto es para que coincida con lo declarado en Play Console.
+    </p>
+
+    <h3>4.1 Datos que puede recopilar CarDiag AI</h3>
     <ul>
-      <li><strong>Datos recopilados (posibles):</strong> datos de app activity/analytics, crash logs, compras/suscripciones, identificadores publicitarios (si hay ads), contenido del usuario (códigos OBD, texto, imágenes subidas).</li>
-      <li><strong>Propósito:</strong> funcionalidad de la app, analítica, prevención de fraude, publicidad (si aplica), soporte, mejoras.</li>
-      <li><strong>Compartición:</strong> con proveedores (pagos, analítica, ads) según corresponda.</li>
-      <li><strong>Seguridad:</strong> medidas razonables y acceso limitado.</li>
-      <li><strong>Eliminación:</strong> solicitud por email: <a href="mailto:teconomiusa@gmail.com">teconomiusa@gmail.com</a>.</li>
+      <li><strong>Contenido del usuario</strong>: texto de diagnóstico (códigos OBD-II, síntomas) e imágenes (si subes fotos).</li>
+      <li><strong>Información de la app</strong>: actividad y rendimiento (analytics/crash logs si están habilitados).</li>
+      <li><strong>Publicidad</strong>: identificador publicitario y eventos de anuncios (AdMob).</li>
+      <li><strong>Dispositivo</strong>: información técnica básica (OS, modelo, idioma, red) para operación/seguridad.</li>
     </ul>
+
+    <h3>4.2 Finalidades típicas</h3>
+    <ul>
+      <li><strong>Funcionalidad</strong>: análisis y resultados de diagnóstico.</li>
+      <li><strong>Analítica</strong>: mejorar la app y estabilidad.</li>
+      <li><strong>Publicidad</strong>: mostrar y medir anuncios (si aplica).</li>
+      <li><strong>Seguridad</strong>: prevención de fraude/abuso.</li>
+    </ul>
+
+    <h3>4.3 Compartición</h3>
+    <ul>
+      <li><strong>OpenAI</strong> (procesamiento IA), <strong>Firebase</strong> (BD/servicios) y <strong>AdMob</strong> (ads).</li>
+    </ul>
+
+    <h3>4.4 Eliminación</h3>
+    <p>
+      Solicitudes de acceso/eliminación: <a href="mailto:teconomiusa@gmail.com">teconomiusa@gmail.com</a>.
+    </p>
   </section>
 
   <footer>
@@ -262,6 +255,9 @@
 
 <script>
   document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
 </script>
 </body>
 </html>
