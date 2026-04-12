@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CarDiag AI | Diagnóstico inteligente OBD2</title>
+  <meta name="description" content="CarDiag AI te ayuda a interpretar códigos OBD2, analizar fallas del vehículo y encontrar soluciones claras desde tu teléfono." />
+  <style>
+    :root {
+      --bg1: #0f46ff;
+      --bg2: #7567ff;
+      --text: #ffffff;
+      --dark: #101828;
+      --muted: #5b6475;
+      --card: #ffffff;
+      --line: #e7eaf0;
+      --accent: #2f80ff;
+      --accent-dark: #1f68db;
+      --success: #22c55e;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      color: var(--dark);
+      background: #f7f9fc;
+    }
+
+    a { text-decoration: none; }
+
+    .hero {
+      background: linear-gradient(135deg, var(--bg1), var(--bg2));
+      color: var(--text);
+      padding: 72px 20px 48px;
+    }
+
+    .container {
+      width: min(1120px, 100% - 32px);
+      margin: 0 auto;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 56px;
+    }
+
+    .brand {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .nav a {
+      color: white;
+      font-weight: 600;
+      opacity: 0.95;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(40px, 6vw, 64px);
+      line-height: 1.02;
+      margin: 0 0 18px;
+      letter-spacing: -0.03em;
+    }
+
+    .hero p {
+      font-size: 20px;
+      line-height: 1.65;
+      opacity: 0.94;
+      max-width: 640px;
+      margin: 0 0 28px;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 24px;
+      border-radius: 14px;
+      font-weight: 800;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: white;
+      color: var(--accent-dark);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.14);
+    }
+
+    .btn-primary:hover { transform: translateY(-1px); }
+
+    .btn-secondary {
+      color: white;
+      border: 1px solid rgba(255,255,255,0.28);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .hero-points {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .hero-point {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 18px;
+      padding: 16px;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .phone-stack {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      align-items: end;
+      flex-wrap: wrap;
+    }
+
+    .phone-stack img {
+      width: min(210px, 28vw);
+      max-width: 100%;
+      border-radius: 28px;
+      box-shadow: 0 24px 50px rgba(0,0,0,0.28);
+      border: 8px solid rgba(255,255,255,0.18);
+      background: white;
+    }
+
+    .section {
+      padding: 72px 20px;
+    }
+
+    .section h2 {
+      text-align: center;
+      font-size: clamp(30px, 4vw, 46px);
+      margin: 0 0 14px;
+      letter-spacing: -0.02em;
+    }
+
+    .section-intro {
+      max-width: 780px;
+      text-align: center;
+      margin: 0 auto 42px;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 26px;
+      box-shadow: 0 14px 40px rgba(15, 23, 42, 0.05);
+    }
+
+    .icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #e8f1ff, #dbe7ff);
+      color: var(--accent-dark);
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 22px;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+      align-items: start;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 24px;
+      border: 1px solid var(--line);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+      background: white;
+    }
+
+    .download {
+      background: linear-gradient(135deg, #111827, #1f2d55);
+      color: white;
+      border-radius: 28px;
+      padding: 44px;
+      text-align: center;
+    }
+
+    .download h2 {
+      margin-top: 0;
+      color: white;
+    }
+
+    .download p {
+      max-width: 760px;
+      margin: 0 auto 24px;
+      color: rgba(255,255,255,0.82);
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    footer {
+      padding: 30px 20px 48px;
+      text-align: center;
+      color: #768197;
+      font-size: 15px;
+    }
+
+    @media (max-width: 960px) {
+      .hero-grid,
+      .features,
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-points {
+        grid-template-columns: 1fr;
+      }
+
+      .phone-stack img {
+        width: min(240px, 70vw);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero { padding-top: 36px; }
+      .nav { margin-bottom: 34px; }
+      .download { padding: 28px 20px; }
+      .btn { width: 100%; }
+      .cta-row { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <nav class="nav">
+        <div class="brand">CarDiag AI</div>
+        <a href="#download">Descargar</a>
+      </nav>
+
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">Diagnóstico inteligente para tu vehículo</div>
+          <h1>Entiende los códigos OBD2 en segundos.</h1>
+          <p>
+            CarDiag AI te ayuda a analizar códigos detectados por tu scanner o por una foto,
+            mostrando causas probables, pruebas sugeridas y soluciones claras desde tu teléfono.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.tecnomi.cardiag" target="_blank" rel="noopener noreferrer">Descargar en Google Play</a>
+            <a class="btn btn-secondary" href="#capturas">Ver capturas</a>
+          </div>
+
+          <div class="hero-points">
+            <div class="hero-point">📷 Analiza una foto de tu scanner y detecta códigos al instante.</div>
+            <div class="hero-point">🧠 Recibe causas comunes y orientación fácil de entender.</div>
+            <div class="hero-point">🔧 Consulta soluciones sugeridas para cada diagnóstico.</div>
+          </div>
+        </div>
+
+        <div class="phone-stack">
+          <img src="assets/onboarding-1.png" alt="Pantalla de bienvenida de CarDiag AI" />
+          <img src="assets/onboarding-2.png" alt="Pantalla de análisis de códigos DTC" />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <h2>Todo lo que necesitas para entender una falla</h2>
+      <p class="section-intro">
+        Diseñada para usuarios que quieren respuestas claras y rápidas, sin complicarse con términos técnicos innecesarios.
+      </p>
+
+      <div class="features">
+        <article class="card">
+          <div class="icon">📸</div>
+          <h3>Análisis por imagen</h3>
+          <p>Sube una foto del scanner y la app identifica los códigos detectados para iniciar el diagnóstico automáticamente.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🧾</div>
+          <h3>Interpretación clara</h3>
+          <p>Obtén explicaciones sencillas sobre cada código, sus posibles causas y qué puede estar fallando en tu vehículo.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🛠️</div>
+          <h3>Soluciones sugeridas</h3>
+          <p>Consulta pasos orientativos para revisar el problema y entender mejor qué reparar antes de tomar una decisión.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="capturas">
+    <div class="container">
+      <h2>Capturas de la app</h2>
+      <p class="section-intro">
+        Conoce la experiencia de CarDiag AI desde la bienvenida hasta el análisis de códigos detectados y sus soluciones.
+      </p>
+
+      <div class="gallery">
+        <img src="assets/onboarding-1.png" alt="Onboarding Diagnóstico Inteligente OBD2" />
+        <img src="assets/onboarding-2.png" alt="Onboarding análisis profesional de códigos DTC" />
+        <img src="assets/analysis-screen.png" alt="Pantalla de análisis de CarDiag AI" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="download" id="download">
+        <h2>Descarga CarDiag AI hoy</h2>
+        <p>
+          Lleva una herramienta de diagnóstico automotriz en tu bolsillo y analiza códigos OBD2 con una experiencia visual clara, moderna y práctica.
+        </p>
+        <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.tecnomi.cardiag" target="_blank" rel="noopener noreferrer">Ir a Google Play</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    CarDiag AI · Landing page lista para GitHub Pages
+  </footer>
+</body>
+</html>
